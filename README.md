@@ -4,28 +4,49 @@
 Library repo for Altium components
 
 ## Instructions
-1. Clone repo preferred on C:\Users\Public\Documents\Altium\AD21\Library.
-2. Install libraries with the Library Manager of Altium. Select the .IntLib files from Outputs folder.
+1. Clone repo preferred on "C:\Users\Public\Documents\Altium\AD21\Library".
+2. Install libraries with the Library Manager of Altium:
+   a. Go to Components, click on the indicated symbol
 
-## Component Types at 07-06-2022
+   <img src="/Images/Lib-01.png">
+
+   b. Click on the "Installed" tab, and then on "Install..." button
+
+   <img src="/Images/Lib-02.png">
+
+   c. Select all the .IntLib files from Outputs folder and click "Open" button
+
+   <img src="/Images/Lib-03.png">
+
+   c. Close the dialog box
+
+## Component Types at 21-08-2023
 The added components start are based on necessity
 - Connectors
+- Crystals
+- Devices
+- Filters
+- Fuses
 - ICs
+- Mechanicals
 - Optoelectronics
 - Passives
 - Relays
 - Semiconductors
+- Switches
 
 ## Adding new components
- - LibPkg:
-    - Name: LIB2022 - [Component Type].libpkg
- - SchLib: 
-    - Name: [Component Type].schlib
+ - Open the corresponding .LibPkg
+ - On the SchLib entry:
+    - Use complete component name
     - Use grid 100mil
- - PcbLib: 
-    - Name: [Component Type].pcblib
+    - Pin lenght < 300mil
+    - Use same pin names as datasheet
+ - On the PcbLib entry:
     - Layers: Name: TOP - BOT
        - 3D Body: 5 - 7
        - Assembly: 8 - 9
        - Courtyard: 4 - 6
     - Separate Courtyard 10mil from Assembly drawing and Pads (wichever corresponds)
+    - Silkscreen drawing according space, the clearance from pads is 10mil
+    - Pin 1 dot indications can go outside the Courtyard if needed
