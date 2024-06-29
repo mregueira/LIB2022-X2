@@ -20,7 +20,7 @@ Library repo for Altium components
 
    c. Close the dialog box
 
-## Component Types at 21-08-2023
+## Component Types at 29-06-2024
 The added components start are based on necessity
 - Connectors
 - Crystals
@@ -36,6 +36,7 @@ The added components start are based on necessity
 - Switches
 
 ## Adding new components
+ - Create new branch
  - Open the corresponding .LibPkg
  - On the SchLib entry:
     - Use complete component name
@@ -48,5 +49,11 @@ The added components start are based on necessity
        - Assembly: 8 - 9
        - Courtyard: 4 - 6
     - Separate Courtyard 10mil from Assembly drawing and Pads (wichever corresponds)
-    - Silkscreen drawing according space, the clearance from pads is 10mil
+    - Silkscreen drawing and width according space, the clearance from pads is 10mil
     - Pin 1 dot indications can go outside the Courtyard if needed
+- Compile .LibPkg
+- Commit changes to dev branch
+- Wait for review
+- Make changes if needed
+- Wait for next review/merging to main
+- Enyoy
